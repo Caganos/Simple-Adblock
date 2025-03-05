@@ -1,0 +1,21 @@
+/* Hide in-video ads */
+.ytp-ad-module,
+.video-ads,
+.ad-showing,
+.ytp-ad-player-overlay,
+.ytp-ad-text {
+    display: none !important;
+}
+
+/* Hide sidebar and homepage ads */
+#player-ads,
+#masthead-ad,
+.ytd-companion-slot-renderer,
+.ytd-ad-slot-renderer {
+    display: none !important;
+}
+
+/* Prevent ad placeholders from delaying video start */
+.ad-showing video {
+    display: block !important;
+}

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Ad Blocker",
+  "version": "1.12",
+  "permissions": [
+    "webRequest",
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["youtube.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
